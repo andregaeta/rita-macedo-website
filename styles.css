@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+
+    color: white;
+    scroll-behavior: smooth;
+}
+
+
+.navBar {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+.navItems {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItems li {
+    text-align: center;
+    padding: 1em;
+    padding-top: 2em;
+    width: 7em;
+}
+li a {
+    color: white;
+    text-decoration: none;
+}
+.navItems img {
+    width: 4em;
+    height: 4em;
+
+}
+
+
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.wrapperVideo {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
+.wrapperOverlayViolet {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(157, 92, 163, 0.4);
+} 
+.wrapperOverlayBlack {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.wrapperContent {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    color: white;
+}
+
+.wrapperContent p {
+    font-size: 6em;
+    padding: 15px;
+}
+
+.wrapperContent h2 {
+    font-weight: 400;
+
+}
+.wrapperBorder {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 10px solid rgba(232, 189, 236, 0.3);
+    box-sizing: border-box;
+}
+
+
+.button {
+    display: block;
+
+    text-align: center;
+    border: 2px solid rgb(216, 94, 216);
+    border-radius: 1px;
+    text-decoration: none;
+    color: rgb(216, 94, 216);
+    width: 220;
+    height: 60;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+    transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(216, 94, 216);
+    transition: 0.3s ease-in-out;
+}
+
+.button:focus {
+    outline:0;
+}
+
+.fluidContainer {
+
+    box-sizing: border-box;
+    max-width: 1400;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+.online {
+    position: relative;
+
+}
+
+.onlineWrapper {
+    display: flex;
+
+    width: 100%;
+
+}
+.onlineImages {
+    width: 50%;
+}
+.onlineWrapper img{
+    box-sizing: border-box;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: 0px 0px 16px#3a3a3a;
+}
+.onlineText {
+    width: 50%;
+    padding-left: 10%;
+    color: black;
+}
+
+h1 {
+    color: rgb(27, 28, 33);
+    letter-spacing: -0.05em;
+    font-weight: 300;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.onlineText h2 {
+    color: rgb(81, 80, 80);
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 85px;
+}
+
+.onlineButton {
+    margin-left: 25%;
+    margin-right: auto;
+
+    width: 250;
+    height: 70;
+    line-height: 70px;
+    font-size: 0.9em;
+}
+
+.dash {
+    content: '';
+    display: inline-block;
+    width: 4rem;
+    border-bottom: 3px solid rgb(216, 94, 216);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testimonial {
+    position: relative;
+}
+
+.testimonialCardContainer {
+    display: grid;
+    grid-gap: 75px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.testimonialCard {
+    background: white;
+    position: relative;
+    box-shadow: 0px 0px 16px rgb(182, 182, 182);
+    background: url("media/geometric-leaves.png");
+    background-color: rgba(255,255,255,0.4);
+    background-blend-mode: lighten;
+}
+
+.testimonialCard::before {
+    content: "";
+    padding-bottom: 100%;
+    display: inline-block;
+}
+.cardContent {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonialText {
+    font-style: italic;
+    height: calc(100% - 1em);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(107, 107, 107);
+}
+
+.testimonialAuthor {
+    font-weight: bold;
+    color: rgb(81, 80, 80);
+}
+
+.testimonialCard i {
+    font-size: 1.7em;
+    color: black;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: -1em;
+    padding: 0.5em;
+    background-color: rgb(216, 94, 216);
+    color: white;
+}
+
+
+
+
+
+
+.divider {
+	position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    height: 1px;
+    
+}
+
+.divider:before {
+    content: "";
+    position: absolute;
+    top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 2px;
+	background-image: linear-gradient(to right, transparent, rgb(216, 94, 216), transparent);
+}
+
+.divider img {
+    position: absolute;
+	z-index: 1;
+    height: 50px;
+    width: auto;
+    top: -25px;
+    left: calc(50% - 40px);
+
+    padding-left: 15px;
+    padding-right: 15px;
+    background: white;
+}
+
+.testimonialVejaMais {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 2.5em;
+}
+
+.doctoraliaButton {
+    margin-left: 15px;
+    display: inline-block;
+    height: 52px;
+    width: 195px;
+    vertical-align: middle;
+    background-image: url("media/doctoraliaPink.png");
+    transition: ease-in-out 0.3s;
+}
+
+.doctoraliaButton:hover {
+    opacity: 0.8;
+    transition: ease-in-out 0.3s;
+}
+
+.skypeWrapper {
+    margin: 150px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("media/corona-skype.jpg") ;
+    background-position-x: 25%;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.skype {
+    padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+.skype h1 {
+    font-size: 56px;
+    color: white;
+    margin-bottom: 20px;
+}
+.skype p {
+    font-size: 18px;
+    color: rgb(215, 215, 215);
+}
+.skype h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.buttonSkype {
+    font-size: 14px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 300px;
+}
+
+.blank {
+    height: 100vh;
+}
+
+footer {
+    color: black;
+}
+
+footer h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+
+}
+
+footer h3 {
+    font-weight: normal;
+    color: rgb(20, 20, 20);
+    text-transform: uppercase;
+}
+
+.footerLine {
+    margin: 25px auto;
+    content: "";
+    width: 80%;
+    height: 1px;
+    background-color: rgb(201, 201, 201);
+}
+
+.innerFooter {
+    margin: 35px 0px;
+    background-color: rgb(235, 235, 235);
+    background: url("media/geometric-leaves.png");
+    width: 100%;
+    overflow: hidden;
+}
+
+.footerContent {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 35px;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footerSobre, .footerLinks, .footerContato{
+    text-align: initial;
+    margin: 0px auto;
+    line-height: 1.8em;
+}
+
+footer .dividerWrapper {
+    margin-top: 200px;
+}
+
+footer .divider {
+    margin: 50px;
+}
+footer .dash {
+    text-align: center;
+    margin: 35px auto;
+}
+footer .copyright {
+    text-align: center;
+    margin: 25px;
+    font-size: 16px;
+    color: rgb(98, 98, 98);
+}
+
+footer .smalldash {
+    margin: 10px 0px;
+    width: 25px;
+    border-width: 1px;
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+}
+footer a:hover {
+    color: rgb(216, 94, 216);
+}
+
+.sobre {
+    padding-top: 150px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+
+.sobre h2 {
+    color: rgb(81, 80, 80);
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 50px;
+}
+
+.sobreImg {
+    width: 40%;
+}
+.sobreImg img {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 16px rgb(27, 27, 27);
+    max-width: 530px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.sobreDesc {
+    width: 60%;
+    margin-left: 5vw;
+}
+
+.sobreDesc a {
+    color: rgb(216, 94, 216);
+    text-decoration: none;
+    font-size: 20px;
+    transition: ease-in-out 0.1s;
+}
+
+.sobreDesc a:hover {
+    opacity: 0.8;
+    transition: ease-in-out 0.1s;
+}
+
+.backgroundText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 200px;
+    color: rgb(240, 240, 240);
+    z-index: -1;
+    text-align: center;
+    margin: auto;
+}
+.backgroundOnline {
+    top: -150px;
+}
+
+.contato {
+    box-sizing: border-box;
+    position: relative;
+}
+.contatoInner {
+    box-sizing: border-box;
+    padding: 10% 5% 2% 5%;
+
+    display: flex;
+    justify-content: space-between;
+    color: rgb(27, 27, 27);
+    text-align: center;
+}
+
+.contatoCard {
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 60px;
+    width: 300px;
+    height: 350px;
+
+    background: rgb(240, 240, 240);
+    /* border: 1px solid rgb(216, 94, 216); */
+    box-shadow: 0px 0px 16px rgb(182, 182, 182);
+    background: url("media/geometric-leaves.png");
+    background-color: rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+}
+.contatoIcon {
+    position: absolute;
+    left: 105px;
+    top: -45px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: rgb(216, 94, 216);
+    border-radius: 50%;
+    padding: 20px;
+}
+.contatoCard h1 {
+    font-size: 32px;
+}
+.contatoCardText {
+    color: rgb(68, 68, 68);
+    margin-bottom: 1em;
+    font-size: 18px;
+}
+.dashContato {
+    margin: 30px 0;
+}
+
+.contato .doctoraliaButton {
+    width: 150px;
+    height: 40px;
+    background-size: contain;
+
+}
+.contato .bottomContatoText {
+    color: rgb(216, 94, 216);
+    font-weight: bold;
+    display: inline-block;
+
+}
+.bottomContato i {
+    font-size: 1.3em;
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+}
+.bottomContatoEmail i{
+    top: 3px;
+    margin-right: 8px;
+}
+
+.bottomContato {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.navMobile {
+    position: relative;
+}
+.navItemsMobile {
+    list-style-type: none;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(216, 94, 216);
+    color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    clip-path: circle(0px at 100% 0%);
+    -webkit-clip-path: circle(0px at 100% 0%);
+    transition: all 1s ease-out;
+
+    padding: 20vh 0;
+    box-sizing: border-box;
+    font-size: 26px;
+}
+
+.navItemsMobile.open {
+    clip-path: circle(1200px at 100% 0%);
+    -webkit-clip-path: circle(1200px at 100% 0%);
+}
+
+.navMobile i {
+    position: fixed;
+    text-shadow: 0 0 5px rgb(75, 75, 75);
+    color: white;
+    z-index: 6;
+    font-size: 2.5em;
+    top: 0px;
+    right: 0px;
+    display: none;
+    padding: 10px 15px;
+}
+
+
+.hasBack {
+    background: rgba(216, 94, 216, 0.7);;
+    transition: 2s ease-in-out;
+}
+/* contato e sobre*/
+@media (max-width: 1100px) {
+    /* contato */
+    .contatoInner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contatoCard {
+        width: 400px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .contatoIcon {
+        left: 155;
+    }
+
+    /* sobre */
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sobreImg {
+        width: 100%;
+    }
+    .sobreDesc {
+        margin: 50px 0 0 0;
+        width: 100%;
+    }
+    .sobre img {
+        max-width: 400px;
+        width: 100%;
+    }
+}
+
+/* atendimento*/
+@media (max-width: 1300px) {
+    /* atendimento */
+    .onlineWrapper {
+        flex-direction: column;
+    }
+    .onlineImages {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        display: block;
+    }
+    .onlineImages img {
+        width: 100%;
+        max-width: 700px;
+        display: block;
+        margin: 0 auto;
+    }
+    .onlineImages img:nth-child(2) {
+        display: none;
+    }
+
+    .onlineText {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .onlineButton {
+        margin: 0 auto;
+    }
+
+
+}
+
+/* depoimentos */
+@media (max-width: 1400px) {
+    .testimonialCardContainer {
+        grid-template-columns: repeat(2, minmax(330px, 420px));
+        justify-content: space-around;
+    }
+}
+@media (max-width: 900px) {
+    .testimonialCardContainer {
+        grid-template-columns: repeat(1, minmax(330px, 420px));
+        justify-content: space-around;
+    }
+    .hideableCard {
+        display: none;
+    }
+}
+
+/* landing page */
+@media (max-width: 1000px) {
+    .wrapper p {
+        font-size: 56px;
+        text-align: center;
+    }
+    .wrapper h2 {
+        font-size: 22px;
+    }
+    .wrapperBorder {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    .navBar {
+        display: none;
+    }
+    .navMobile i {
+        display: block;
+    }
+}
+
+
+@media (max-width:500px) {
+    h1 {
+        font-size: 56px;
+    }
+
+}
+@media (max-width:420px) {
+    h1, .skype h1 {
+        font-size: 46px;
+    }
+    .buttonSkype {
+        width: 250px;
+    }
+}
+
+
+
+/* .divider {
+    margin:64px auto;
+    width:600px; 
+    max-width: 100%;
+    position:relative;
+}
+
+.dividerMask {
+    overflow:hidden; height:20px; 
+}
+
+.dividerMask:after {
+    content:''; 
+    display:block; margin:-25px auto 0;
+    width:100%; height:25px;  
+    border-radius: 125px / 12px;
+    box-shadow:0 0 8px rgb(216, 94, 216);
+}
+
+.divider span {
+    width:100px; height:100px; 
+    position:absolute; 
+    bottom:100%; margin-bottom:-50px;
+    left:50%; margin-left:-50px;
+
+
+    background:#fff;
+}
+
+.divider img {
+    height: 50px;
+    width: auto;
+    position:absolute;
+    top:28px;
+    left: 21px;
+
+
+} */
